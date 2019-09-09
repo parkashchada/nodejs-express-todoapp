@@ -18,7 +18,7 @@
     "dev": "nodemon --watch ./src --ignore ./src/__tests__ -x \"npm start\"",
     "coverage": "jest --coverage",
     "migrate": "node ./node_modules/db-migrate/bin/db-migrate up all",
-    "testing": "echo \"Error: I SHOULD FAIL LOL \" && exit 1"
+    "testing": "echo \"Error: I SHOULD FAIL LOL \" && exit 0"
   },
   "keywords": [
     "todo-backend",

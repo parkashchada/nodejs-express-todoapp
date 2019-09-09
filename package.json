@@ -17,7 +17,8 @@
     "watch-tests": "npm run migrate && esw src & jest --watchAll",
     "dev": "nodemon --watch ./src --ignore ./src/__tests__ -x \"npm start\"",
     "coverage": "jest --coverage",
-    "migrate": "node ./node_modules/db-migrate/bin/db-migrate up all"
+    "migrate": "node ./node_modules/db-migrate/bin/db-migrate up all",
+    "testing": "echo \"Error: I SHOULD FAIL LOLOLOLOLOL \" && exit 1"
   },
   "keywords": [
     "todo-backend",
@@ -51,6 +52,7 @@
     "babel-jest": "^19.0.0",
     "eslint": "^3.17.1",
     "eslint-watch": "^3.0.1",
+    "git-pre-push": "0.0.5",
     "jest": "^19.0.2",
     "nodemon": "^1.11.0",
     "supertest": "^3.0.0"
@@ -94,5 +96,8 @@
         "always"
       ]
     }
-  }
+  },
+  "pre-push": [
+    "testing"
+  ]
 }
